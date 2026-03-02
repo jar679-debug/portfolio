@@ -175,8 +175,31 @@ section {
 }
 
 .about-content {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.about-photo {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .about-text p {
@@ -517,6 +540,15 @@ section {
 
     .section-title {
         font-size: 2rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .profile-image {
+        max-width: 250px;
     }
 
     .timeline::before {
